@@ -11,20 +11,14 @@
     <header>
       <h1>Add Todo</h1>
       <form>
-        <input type="text" placeholder="Add todo" />
+        <input type="text" placeholder="Add todo" name="todo" id="todoInput" />
         <button type="submit" class="btn-submit">Add</button>
-        <button type="clear" class="btn-clear">Clear</button>
+        <button type="reset" class="btn-clear">Clear</button>
       </form>
     </header>
     <main>
       <h2>Todo List</h2>
-      <section class="todos">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, a?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, a?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, a?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, a?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, a?</p>
-      </section>
+      <section id="todoSection" class="todos"></section>
     </main>
   </body>
   <script src="jQuery.js" type="text/javascript"></script>
