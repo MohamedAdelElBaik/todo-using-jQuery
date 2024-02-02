@@ -78,7 +78,10 @@ main {
     flex-direction: column;
     gap: 10px;
 
-    p {
+    article {
+      display: flex;
+      gap: 10px;
+      align-items: center;
       background-color: var(--secondary-color);
       padding: 15px;
 
@@ -86,6 +89,14 @@ main {
         background-color: var(--primary-color);
         padding: 10px;
         display: inline-block;
+      }
+      p {
+        flex-grow: 1;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
       }
     }
   }

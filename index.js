@@ -1,11 +1,18 @@
+const todoItemHTML = (i, val) =>
+  `<article>
+    <span>${i}</span>
+    <p>${val}</p>
+    <img src="images/deleteIcon.png" alt="delete" />
+  </article>`;
+
 $('document').ready(function () {
   let index = 0;
   $('form').submit(function () {
-    index++;
+    index++; // counter for todo number
     const todoValue = $('#todoInput').val();
     // if there is no todo text don't add empty todo in todo list
     if (todoValue) {
-      $('#todoSection').prepend(`<p><span>${index}</span> ${todoValue}</p>`);
+      $('#todoSection').prepend(todoItemHTML(index, todoValue));
     }
 
     // reset input value
