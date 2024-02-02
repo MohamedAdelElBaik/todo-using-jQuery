@@ -4,16 +4,81 @@
   box-sizing: border-box;
   outline: none;
   font-family: Arial, Helvetica, sans-serif;
+  border: none;
 }
 
 :root {
-  --dark-color: #282c34;
-  --secondary-color: #008ca8;
-  --light-color: #b9dcb3;
   --primary-color: #2a3447;
+  --secondary-color: #00697e;
+  --dark-color: #212a3b;
+  --warning-color: rgb(218, 70, 70);
+  --wight-color: white;
 }
 
 body {
-  background-color: var(--light-color);
+  background-color: var(--primary-color);
   color: var(--dark-color);
+  color: var(--wight-color);
+}
+
+main,
+header {
+  padding: 20px;
+}
+
+header {
+  background-color: var(--dark-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 30px;
+  }
+
+  form {
+    display: flex;
+
+    button {
+      width: 70px;
+      cursor: pointer;
+    }
+    .btn-submit {
+      color: var(--wight-color);
+      background-color: var(--secondary-color);
+    }
+    .btn-clear {
+      color: var(--wight-color);
+      background-color: var(--warning-color);
+    }
+
+    input {
+      padding: 0 10px;
+      width: 400px;
+      height: 50px;
+      font-size: 18px;
+      color: var(--dark-color);
+    }
+  }
+}
+
+main {
+  h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+      background-color: var(--secondary-color);
+      padding: 20px;
+    }
+  }
 }
