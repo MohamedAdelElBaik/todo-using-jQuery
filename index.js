@@ -2,11 +2,13 @@ const todoItemHTML = (i, val) =>
   `<article>
     <span>${i}</span>
     <p>${val}</p>
-    <img src="images/deleteIcon.png" alt="delete" />
+    <img src="images/deleteIcon.png" alt="delete" id='delete' />
   </article>`;
 
 $('document').ready(function () {
   let index = 0;
+
+  // on click add
   $('form').submit(function () {
     index++; // counter for todo number
     const todoValue = $('#todoInput').val();
@@ -20,5 +22,11 @@ $('document').ready(function () {
 
     $('h2').css('background-color', 'red');
     return false; // prevent default reload
+  });
+
+  // on click delete in the todo item
+  $('section').on('click', '#delete', function () {
+    var id = $(this).parent();
+    id.fadeOut(' ');
   });
 });
