@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --dark-color: #282c34;
+  --secondary-color: #008ca8;
+  --light-color: #b9dcb3;
+  --primary-color: #2a3447;
+}
+
+body {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
