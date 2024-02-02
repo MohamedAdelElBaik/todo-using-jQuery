@@ -3,10 +3,15 @@ $('document').ready(function () {
   $('form').submit(function () {
     index++;
     const todoValue = $('#todoInput').val();
-    $('#todoSection').prepend(`<p><span>${index}</span> ${todoValue}</p>`);
+    // if there is no todo text don't add empty todo in todo list
+    if (todoValue) {
+      $('#todoSection').prepend(`<p><span>${index}</span> ${todoValue}</p>`);
+    }
+
+    // reset input value
     $('#todoInput').val('');
 
     $('h2').css('background-color', 'red');
-    return false;
+    return false; // prevent default reload
   });
 });
