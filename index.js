@@ -29,15 +29,15 @@ $('document').ready(function () {
     id.fadeOut(' ');
   });
 
+  // sort todo content
   $('#todoContent').sortable({
-    connectWith: '#doneContent',
+    connectWith: '#doneContent', // to move todo item from this container to (doneContent) container
     opacity: 0.5,
   });
-  $('#doneContent').sortable();
 
+  // sort done content
   $('#doneContent').sortable({
-    connectWith: '#todoContent',
+    connectWith: '#todoContent', // like above
     opacity: 0.5,
   });
-  $('#todoContent').sortable();
 });
