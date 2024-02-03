@@ -10,6 +10,7 @@
 :root {
   --primary-color: #2a3447;
   --secondary-color: #00697e;
+  --secondary-color-light: #5a939e;
   --dark-color: #212a3b;
   --warning-color: rgb(218, 70, 70);
   --wight-color: white;
@@ -72,32 +73,45 @@ main {
     text-align: center;
     margin-bottom: 25px;
   }
-
-  section {
+  #todoContent,
+  #doneContent {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-height: 50px;
+    margin-bottom: 30px;
+  }
+  #doneContent {
+    .item-list {
+      background-color: var(--secondary-color-light);
 
-    article {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      background-color: var(--secondary-color);
-      padding: 15px;
-
-      span {
-        background-color: var(--primary-color);
-        padding: 10px;
-        display: inline-block;
-      }
       p {
-        flex-grow: 1;
+        text-decoration: line-through;
       }
-      img {
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-      }
+    }
+  }
+
+  .item-list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 15px;
+    cursor: move;
+    width: 100%;
+
+    span {
+      background-color: var(--primary-color);
+      padding: 10px;
+      display: inline-block;
+    }
+    p {
+      flex-grow: 1;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
     }
   }
 }
